@@ -1,8 +1,4 @@
-<%@page import="com.controller.Adminlogin"%>
-<%@page import="com.dao.FetchUserIdDao" %>
-<%@page import="java.util.ArrayList"%>
-<%@page import="com.model.FetchUserIdpojo"%>
-<% ArrayList<FetchUserIdpojo> list=(ArrayList<FetchUserIdpojo>) session.getAttribute("customer"); %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -215,37 +211,17 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="/NETBANKING/" class="nav-link">
+            <a href="/NETBANKING/AAccountFetch" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Account Info
-                <span class="right badge badge-danger">New</span>
+                <span class="right badge badge-danger"></span>
               </p>
             </a>
           </li>
         
          
-          <li class="nav-item">
-            <a href="" class="nav-link">
-              <i class="nav-icon fas fa-chart-pie"></i>
-              <p>
-                Customer Report
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
         
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tree"></i>
-              <p>
-                Account Report
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-           
-          </li>
-    
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -819,26 +795,7 @@
                   Calendar
                 </h3>
                 <!-- tools card -->
-                <div class="card-tools">
-                  <!-- button with a dropdown -->
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown" data-offset="-52">
-                      <i class="fas fa-bars"></i>
-                    </button>
-                    <div class="dropdown-menu" role="menu">
-                      <a href="#" class="dropdown-item">Add new event</a>
-                      <a href="#" class="dropdown-item">Clear events</a>
-                      <div class="dropdown-divider"></div>
-                      <a href="#" class="dropdown-item">View calendar</a>
-                    </div>
-                  </div>
-                  <button type="button" class="btn btn-success btn-sm" data-card-widget="collapse">
-                    <i class="fas fa-minus"></i>
-                  </button>
-                  <button type="button" class="btn btn-success btn-sm" data-card-widget="remove">
-                    <i class="fas fa-times"></i>
-                  </button>
-                </div>
+             
                 <!-- /. tools -->
               </div>
               <!-- /.card-header -->

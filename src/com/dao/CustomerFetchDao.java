@@ -14,7 +14,7 @@ public class CustomerFetchDao {
 		ArrayList<CustomerFetchpojo> a=new ArrayList<CustomerFetchpojo>();
 		
 		ResultSet rs=null;
-		String sql="select * from cuntomer"; 
+		String sql="select * from customer"; 
 		String url="jdbc:mysql://localhost:3306/netbanking";
 		String username="root";
 		String password="root";
@@ -35,6 +35,12 @@ public class CustomerFetchDao {
 				String streetname=rs.getString("streetname");
 				String cphoneno=rs.getString("cphoneno");				
 				String pincode=rs.getString("pincode");
+				String password1=rs.getString("password");
+				String cemail=rs.getString("cemail");
+				String adharno=rs.getString("adharno");
+				String panno=rs.getString("panno");
+				String dob=rs.getString("dob");
+				String gender=rs.getString("gender");
 				
 				
 				
@@ -49,6 +55,13 @@ public class CustomerFetchDao {
 				bean.setStreetname(streetname);
 				bean.setCphoneno(cphoneno);				
 				bean.setPincode(pincode);
+				bean.setPassword(password1);
+				bean.setCemail(cemail);
+				bean.setAdharno(adharno);
+				bean.setPanno(panno);
+				bean.setDob(dob);
+				bean.setGender(gender);
+				
 				
 				a.add(bean);
 				

@@ -47,15 +47,21 @@ https://www.tooplate.com/view/2119-gymso-fitness
                     </li>
 
                     <li class="nav-item">
-                        <a href="#class" class="nav-link smoothScroll">Classes</a>
+                        <a href="/NETBANKING/UCustomerFetch" class="nav-link smoothScroll">Customer Info</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#schedule" class="nav-link smoothScroll">Schedules</a>
+                        <a href="/NETBANKING/AccountFetch" class="nav-link smoothScroll">Account Info</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="Fundtransfer.jsp" class="nav-link smoothScroll">Fund Transfer</a>
+                        <a href="/Fundtransfer.jsp" class="nav-link smoothScroll">Fund Transfer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/NETBANKING/FD.jsp" class="nav-link smoothScroll">FD</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/NETBANKING/RD.jsp" class="nav-link smoothScroll">RD</a>
                     </li>
                 </ul>
 

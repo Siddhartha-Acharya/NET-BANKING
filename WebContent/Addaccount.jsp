@@ -3,161 +3,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Admin</title>
 
-  <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  <!-- Tempusdominus Bootstrap 4 -->
-  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
-  <!-- iCheck -->
-  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-  <!-- JQVMap -->
-  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/adminlte.min.css">
-  <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-  <!-- Daterange picker -->
-  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
-  <!-- summernote -->
-  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+     <title>XYZ Bank</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="css1/bootstrap.min.css">
+     <link rel="stylesheet" href="css1/font-awesome.min.css">
+     <link rel="stylesheet" href="css1/aos.css">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="css1/tooplate-gymso-style.css">
+<!--
+Tooplate 2119 Gymso Fitness
+https://www.tooplate.com/view/2119-gymso-fitness
+-->
 </head>
-<body class="hold-transition sidebar-mini layout-fixed">
-<div class="wrapper">
+<body data-spy="scroll" data-target="#navbarNav" data-offset="50">
 
-  <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    <!-- Left navbar links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link"></a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link"></a>
-      </li>
-    </ul>
+    <!-- MENU BAR -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
 
+            <a class="navbar-brand" href="index.html">XYZ Bank</a>
 
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-   <!-- Main content -->
-    <section class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <!-- left column -->
-          <div class="col-md-12">
-            <!-- jquery validation -->
-            <div class="card card-primary">
-              <div class="card-header">
-                <h3 class="card-title"><small></small></h3>
-              </div>
-              <!-- /.card-header -->
-              <!-- form start -->
-              <form id="quickForm" action="/NETBANKING/Addaccount" name="Addaccount" method="post">
-                <div class="card-body">
-                  <div class="form-group">
-                   <select name="acctype">
-                   <option value="Student">Student</option>
-                    <option value="General">General</option>
-                   </select>
-                  </div>
-                   <div class="form-group">
-                    <label for="exampleInputEmail1">accno</label>
-                    <input type="text" name="accno" class="form-control" id="exampleInputEmail1" placeholder="accno">
-                  </div>
-                   <div class="form-group">
-                    <label for="exampleInputEmail1">date of open</label>
-                    <input type="date" name="dateofopen" class="form-control" id="exampleInputEmail1" placeholder="date of open">
-                  </div>
-                   <div class="form-group">
-                    <label for="exampleInputEmail1">balance</label>
-                    <input type="text" name="balance" class="form-control" id="exampleInputEmail1" placeholder="balance">
-                  </div>
-                  
-                  <div class="form-group mb-0">
-                    <div class="custom-control custom-checkbox">
-                      <input type="checkbox" name="terms" class="custom-control-input" id="exampleCheck1">
-                      <label class="custom-control-label" for="exampleCheck1">I agree to the <a href="#">terms of service</a>.</label>
-                    </div>
-                  </div>
-                </div>
-                <!-- /.card-body -->
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-              </form>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                 <ul class="navbar-nav ml-lg-auto">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link smoothScroll">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link smoothScroll">About Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/NETBANKING/UCustomerFetch" class="nav-link smoothScroll">Customer Info</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/NETBANKING/AccountFetch" class="nav-link smoothScroll">Account Info</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/Fundtransfer.jsp" class="nav-link smoothScroll">Fund Transfer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/NETBANKING/FD.jsp" class="nav-link smoothScroll">FD</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/NETBANKING/RD.jsp" class="nav-link smoothScroll">RD</a>
+                    </li>
+                </ul>
+                <ul class="social-icon ml-lg-3">
+                    <li><a href="https://fb.com/tooplate" class="fa fa-facebook"></a></li>
+                    <li><a href="#" class="fa fa-twitter"></a></li>
+                    <li><a href="#" class="fa fa-instagram"></a></li>
+                </ul>
             </div>
-            <!-- /.card -->
-            </div>
-          <!--/.col (left) -->
-          <!-- right column -->
-          <div class="col-md-6">
 
-          </div>
-          <!--/.col (right) -->
         </div>
-        <!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </section>
-  </div>
-  <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2020 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
-    All rights reserved.
-    <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 3.1.0-rc
-    </div>
-  </footer>
+    </nav>
 
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
+ 
+     <!-- CONTACT -->
+     <section class="contact section" id="contact">
+          <div class="container">
+               <div class="row">
 
-<!-- jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
-<!-- jQuery UI 1.11.4 -->
-<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-  $.widget.bridge('uibutton', $.ui.button)
-</script>
-<!-- Bootstrap 4 -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- ChartJS -->
-<script src="plugins/chart.js/Chart.min.js"></script>
-<!-- Sparkline -->
-<script src="plugins/sparklines/sparkline.js"></script>
-<!-- JQVMap -->
-<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
-<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-<!-- jQuery Knob Chart -->
-<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
-<!-- daterangepicker -->
-<script src="plugins/moment/moment.min.js"></script>
-<script src="plugins/daterangepicker/daterangepicker.js"></script>
-<!-- Tempusdominus Bootstrap 4 -->
-<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-<!-- Summernote -->
-<script src="plugins/summernote/summernote-bs4.min.js"></script>
-<!-- overlayScrollbars -->
-<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-<!-- AdminLTE App -->
-<script src="dist/js/adminlte.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="dist/js/pages/dashboard.js"></script>
+                    <div class="ml-auto col-lg-5 col-md-6 col-12">
+                        <h2 class="mb-4 pb-2" data-aos="fade-up" data-aos-delay="200">Customer</h2>
+
+                        <form action="/NETBANKING/Addaccount" name="Addaccount" method="post">
+                     
+                         
+                      <input type="text" class="form-control" name="accno" placeholder="Account No">
+                      <select name="acctype">
+                       <option>select</option>
+                       <option>student</option>
+                       <option>general</option>
+                       </select>
+                      <input type="date" class="form-control" name="dateofopen" placeholder="First Date">
+                      <input type="text" class="form-control" name="balance" placeholder="Balance">
+                      
+                      
+                        
+
+                            <button type="submit" class="form-control" id="submit-button" name="submit">Add Account</button>
+                        </form>
+                    </div>
+
+                    
+               </div>
+          </div>
+     </section>
+
+
+ 
+
+     <!-- SCRIPTS -->
+     <script src="js1/jquery.min.js"></script>
+     <script src="js1/bootstrap.min.js"></script>
+     <script src="js1/aos.js"></script>
+     <script src="js1/smoothscroll.js"></script>
+     <script src="js1/custom.js"></script>
+
 </body>
 </html>

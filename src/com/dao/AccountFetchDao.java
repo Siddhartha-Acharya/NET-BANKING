@@ -4,16 +4,16 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
-import com.model.FetchUserIdpojo;
+import com.model.AccountFetchpojo;
 
-public class FetchUserIdDao {
+public class AccountFetchDao {
 	
-	public ArrayList<FetchUserIdpojo> list ()
+	public ArrayList<AccountFetchpojo> list ()
 	{
-		ArrayList<FetchUserIdpojo> a=new ArrayList<FetchUserIdpojo>();
+		ArrayList<AccountFetchpojo> a=new ArrayList<AccountFetchpojo>();
 		
 		ResultSet rs=null;
-		String sql="select * from login"; 
+		String sql="select * from account"; 
 		String url="jdbc:mysql://localhost:3306/netbanking";
 		String username="root";
 		String password="root";
@@ -28,13 +28,21 @@ public class FetchUserIdDao {
 			
 			while(rs.next())
 			{
-				String cid=rs.getString("cid");
+				String accno=rs.getString("accno");
+				String acctype=rs.getString("acctype");
+				String dateofopen=rs.getString("dateofopen");
+				String balance=rs.getString("balance");
+				String cid=rs.getString("cid");				
+								
+				AccountFetchpojo bean =new AccountFetchpojo();
 				
 				
-				FetchUserIdpojo bean =new FetchUserIdpojo();
+				bean.setAccno(accno);
+				bean.setAcctype(acctype);
+				bean.setDateofopen(dateofopen);
+				bean.setBalance(balance);
+				bean.setCid(cid);				
 				
-				
-				bean.setCid(cid);
 				
 				a.add(bean);
 				
@@ -50,3 +58,4 @@ public class FetchUserIdDao {
 
 }
 }
+

@@ -7,6 +7,49 @@ public class Adcustomerpojo {
 	private String cname;
 	private String streetname;
 	private String cphoneno;
+	private String password;
+	private String cemail;
+	private String adharno;
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public String getCemail() {
+		return cemail;
+	}
+	public void setCemail(String cemail) {
+		this.cemail = cemail;
+	}
+	public String getAdharno() {
+		return adharno;
+	}
+	public void setAdharno(String adharno) {
+		this.adharno = adharno;
+	}
+	public String getPanno() {
+		return panno;
+	}
+	public void setPanno(String panno) {
+		this.panno = panno;
+	}
+	public String getDob() {
+		return dob;
+	}
+	public void setDob(String dob) {
+		this.dob = dob;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	private String panno;
+	private String dob;
+	private String gender;
+	
 	public String getCid() {
 		return cid;
 	}

@@ -1,8 +1,4 @@
-<%@page import="com.controller.Adminlogin"%>
-<%@page import="com.dao.FetchUserIdDao" %>
-<%@page import="java.util.ArrayList"%>
-<%@page import="com.model.FetchUserIdpojo"%>
-<% ArrayList<FetchUserIdpojo> list1=(ArrayList<FetchUserIdpojo>) session.getAttribute("customer"); %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -285,6 +281,13 @@
                     <th>streetname</th>
                     <th>cphoneno</th>
                     <th>pincode</th>
+                     <th>password</th>
+                      <th>Customer Mail</th>
+                       <th>Adhar no</th>
+                        <th>Pan no</th>
+                         <th>Date of birth</th>
+                          <th>Gender</th>
+                         
                   </tr>
                   </thead>
                   <tbody>
@@ -296,12 +299,36 @@
                    <td><%=list.get(i).getStreetname() %></td>
                    <td><%=list.get(i).getCphoneno() %></td>
                     <td><%=list.get(i).getPincode() %></td>
+                      <td><%=list.get(i).getPassword() %></td>
+                        <td><%=list.get(i).getCemail() %></td>
+                          <td><%=list.get(i).getAdharno() %></td>
+                            <td><%=list.get(i).getPanno() %></td>
+                              <td><%=list.get(i).getDob() %></td>
+                                <td><%=list.get(i).getGender() %></td>
                   </tr>
-                 <%} %>
+                 
                   </tbody>
                    
                   </tbody>
                 </table>
+                 <div class="card-body">
+                <div id="actions" class="row">
+                  <div class="col-lg-6">
+                    <div class="btn-group w-100">
+                     
+                      <button type="submit" class="btn btn-primary col start">
+                        <i class="fas fa-upload"> <a href="/NETBANKING/AUpdatecustomer.jsp?cemail=<%=list.get(i).getCemail() %>">update customer</a></i>
+                       <%} %>
+                      </button>
+                      <button type="reset" class="btn btn-warning col cancel">
+                        <i class="fas fa-times-circle"></i>
+                        <span><a href="/NETBANKING/Adeletecustomer.jsp">Delete upload</span>
+                      </button>
+                    </div>
+                  </div>
+                  </div>
+                  </div>
+                
               </div>
               <!-- /.card-body -->
             </div>
@@ -315,28 +342,8 @@
   
     <!-- /.content -->
   </div>
-  <% for(int i=0;i<list1.size();i++){ %>
-   <div class="card-body">
-                <div id="actions" class="row">
-                  <div class="col-lg-6">
-                    <div class="btn-group w-100">
-                      <span class="btn btn-success col fileinput-button">
-                        <i class="fas fa-plus"></i>
-                        <span><a href="/NETBANKING/Adminlogin?cid=<%=list1.get(i).getCid() %>">Add Customer</a></span>
-                      </span>
-                      <button type="submit" class="btn btn-primary col start">
-                        <i class="fas fa-upload"></i>
-                        <span>Start upload</span>
-                      </button>
-                      <button type="reset" class="btn btn-warning col cancel">
-                        <i class="fas fa-times-circle"></i>
-                        <span>Cancel upload</span>
-                      </button>
-                    </div>
-                  </div>
-                  </div>
-                  </div>
-                  <%} %>
+ 
+  
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <div class="float-right d-none d-sm-block">

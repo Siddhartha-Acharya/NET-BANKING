@@ -33,13 +33,21 @@ public class Adcustomer extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		HttpSession session=request.getSession();
-        String cid=(String)session.getAttribute("username");
+        String cid=(String) session.getAttribute("cid");
         String plotno=request.getParameter("plotno");
         String cname=request.getParameter("cname");
         String streetname=request.getParameter("streetname");
         String cphoneno=request.getParameter("cphoneno");
 		String pincode=request.getParameter("pincode");
-		//System.out.println("cid"+cid);
+		String password=request.getParameter("password");
+		String cemail=request.getParameter("cemail");
+		String adharno=request.getParameter("adharno");
+		String panno=request.getParameter("panno");
+		String dob=request.getParameter("dob");
+		String gender=request.getParameter("gender");
+		
+		
+		
 		Adcustomerpojo c=new Adcustomerpojo();
 		
 		
@@ -49,12 +57,20 @@ public class Adcustomer extends HttpServlet {
 		c.setStreetname(streetname);
 		c.setCphoneno(cphoneno);
 		c.setPincode(pincode);
+		c.setPassword(password);
+		c.setCemail(cemail);
+		c.setAdharno(adharno);
+		c.setPanno(panno);
+		c.setDob(dob);
+		c.setGender(gender);
 		
+		 session.setAttribute("email", cemail);
+		// session.setAttribute("cid1", cid);
 		String customer=dao.registration(c);
 		
 		if(customer.equals("SUCCESS")){
 			System.out.println("1 add customer");
-			response.sendRedirect("Adminhome.jsp");
+			response.sendRedirect("Customerhome.jsp");
 		}
 	}
 	

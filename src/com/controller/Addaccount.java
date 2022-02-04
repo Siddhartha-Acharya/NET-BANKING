@@ -40,13 +40,13 @@ public class Addaccount extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		HttpSession session=request.getSession();
-		 String accno=request.getParameter("accno");
+		    String accno=request.getParameter("accno");
 	        String acctype=request.getParameter("acctype");
 	        String dateofopen=request.getParameter("dateofopen");
 	        String balance=request.getParameter("balance");
-	        String cid=(String) session.getAttribute("username");
+	        String cid=(String) session.getAttribute("cid");
 		
-			//System.out.println("cid"+cid);
+			System.out.println("Acid"+cid);
 	        Addaccountpojo c=new Addaccountpojo();
 			
 			
@@ -59,8 +59,8 @@ public class Addaccount extends HttpServlet {
 			String customer=dao.addamount(c);
 			
 			if(customer.equals("SUCCESS")){
-				System.out.println("1 add amount");
-				response.sendRedirect("Adminhome.jsp");
+				System.out.println("1 add account");
+				response.sendRedirect("Customerhome.jsp");
 			}
 		}
 	}

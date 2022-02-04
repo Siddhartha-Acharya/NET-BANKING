@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.dao.FetchUserIdDao;
+
 import com.model.FetchUserIdpojo;
 
 /**
@@ -19,7 +19,7 @@ import com.model.FetchUserIdpojo;
 @WebServlet("/Adminlogin")
 public class Adminlogin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       private FetchUserIdDao dao=new FetchUserIdDao();
+      
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -27,12 +27,7 @@ public class Adminlogin extends HttpServlet {
         super();
         // TODO Auto-generated constructor stub
     }
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    HttpSession session =request.getSession();
-	ArrayList<FetchUserIdpojo> s=dao.list();
-    session.setAttribute("fetch", s);
-  // response.sendRedirect(".jsp");
-	}
+	
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
